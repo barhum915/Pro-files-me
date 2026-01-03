@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ar" dir="rtl" id="top">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ibrahim Bkkari | Portfolio</title>
+  <meta name="description" content="Portfolio / CV لإبراهيم بكّاري - Front-End Developer (17)" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Social Preview (اختياري: ضيف preview.png لاحقاً) -->
+  <meta property="og:title" content="Ibrahim Bkkari | Portfolio" />
+  <meta property="og:description" content="Front-End Developer (17) — Projects • Skills • Contact" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top progress bar -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__wrap">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__logo">IB</span>
+        <span class="brand__text">
+          <strong>Ibrahim Bkkari</strong>
+          <em>Front-End Developer</em>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a class="nav__link" href="#about">عنّي</a>
+        <a class="nav__link" href="#skills">مهاراتي</a>
+        <a class="nav__link" href="#projects">مشاريعي</a>
+        <a class="nav__link" href="#contact">تواصل</a>
+      </nav>
+
+      <div class="actions">
+        <button class="iconBtn" id="themeBtn" type="button" aria-label="تبديل المظهر">
+          <span class="icon" aria-hidden="true">☾</span>
+        </button>
+        <button class="iconBtn" id="menuBtn" type="button" aria-label="فتح القائمة">
+          <span class="icon" aria-hidden="true">≡</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobileNav" id="mobileNav" hidden>
+      <a href="#about">عنّي</a>
+      <a href="#skills">مهاراتي</a>
+      <a href="#projects">مشاريعي</a>
+      <a href="#contact">تواصل</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__wrap">
+        <div class="hero__text reveal">
+          <p class="badge">متاح لمشاريع Freelance</p>
+          <h1>أنا إبراهيم بكّاري 👋</h1>
+          <p class="lead">
+            مطوّر واجهات أمامية <strong>Front-End</strong> (عمري 17 سنة).
+            ببني مواقع سريعة، مرتبة، وResponsive مع اهتمام كبير بتجربة المستخدم.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">شوف مشاريعي</a>
+            <a class="btn btn--ghost" href="#contact">تواصل معي</a>
+          </div>
+
+          <div class="quick">
+            <button class="chip" id="copyWhats" type="button">نسخ رقم واتساب</button>
+            <a class="chip" target="_blank" rel="noopener" href="https://wa.me/963968201410">واتساب مباشر</a>
+            <a class="chip" target="_blank" rel="noopener" href="https://github.com/barhum915">GitHub</a>
+            <a class="chip" target="_blank" rel="noopener" href="https://www.instagram.com/ibrahimbkkari">Instagram</a>
+          </div>
+        </div>
+
+        <aside class="heroCard reveal">
+          <div class="heroCard__top">
+            <div class="avatar" aria-hidden="true">IB</div>
+            <div>
+              <h3 class="heroCard__name">Ibrahim Bkkari</h3>
+              <p class="heroCard__role">Front-End • UI/UX</p>
+            </div>
+          </div>
+
+          <ul class="facts">
+            <li><span>🎂</span> العمر: <strong>17</strong></li>
+            <li><span>🧩</span> HTML • CSS • JS</li>
+            <li><span>🎨</span> UI/UX + WordPress</li>
+            <li><span>⚡</span> Responsive & Clean UI</li>
+          </ul>
+
+          <div class="heroCard__footer">
+            <a class="btn btn--small btn--primary" target="_blank" rel="noopener" href="https://github.com/barhum915">GitHub</a>
+            <a class="btn btn--small btn--ghost" target="_blank" rel="noopener" href="https://wa.me/963968201410">WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>عنّي</h2>
+          <p>نبذة سريعة + طريقة شغلي.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3>مين أنا؟</h3>
+            <p>
+              أنا <strong>Ibrahim Bkkari</strong> مطوّر واجهات أمامية مهتم بتطوير مواقع حديثة بأداء عالي.
+              بحب التفاصيل الصغيرة (spacing، typography، responsive) وبشتغل على واجهات مرتبة وواضحة للمستخدم.
+              هدفي أقدم مواقع جاهزة للنشر، منظمة، وسهلة التطوير.
+            </p>
+            <div class="stats">
+              <div class="stat"><strong>17</strong><span>سنة</span></div>
+              <div class="stat"><strong>Responsive</strong><span>Mobile First</span></div>
+              <div class="stat"><strong>Clean</strong><span>Code</span></div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>شو بقدّم؟</h3>
+            <ul class="list">
+              <li>Landing Pages احترافية</li>
+              <li>مواقع شخصية (CV/Portfolio)</li>
+              <li>تصميم واجهات UI و تحسين تجربة المستخدم</li>
+              <li>تحسين سرعة الموقع وتهيئة الـ Responsive</li>
+            </ul>
+
+            <div class="callout">
+              <span class="dot"></span>
+              <p>جاهز أجهز موقع كامل وتسليمه مرتب ورافعه على GitHub Pages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>المهارات</h2>
+          <p>تقسيم واضح + مستوى تقريبي.</p>
+        </div>
+
+        <div class="skills" id="skillsGrid">
+          <!-- JS fill -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (AUTO from GitHub) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>مشاريعي</h2>
+          <p>المشاريع تنجلب تلقائياً من GitHub تبعك.</p>
+        </div>
+
+        <div class="projects" id="projectsGrid"></div>
+        <p class="muted" id="projectsNote" style="margin-top:12px"></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>تواصل معي</h2>
+          <p>واتساب + رسالة جاهزة (بتنفتح بواتساب).</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3>روابط سريعة</h3>
+            <ul class="contactList">
+              <li>
+                <span>📱</span>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a target="_blank" rel="noopener" href="https://wa.me/963968201410">+963 968 201 410</a>
+                  <button class="miniBtn" id="copyWhats2" type="button">نسخ</button>
+                </div>
+              </li>
+              <li>
+                <span>🐙</span>
+                <div>
+                  <strong>GitHub</strong>
+                  <a target="_blank" rel="noopener" href="https://github.com/barhum915">github.com/barhum915</a>
+                </div>
+              </li>
+              <li>
+                <span>📸</span>
+                <div>
+                  <strong>Instagram</strong>
+                  <a target="_blank" rel="noopener" href="https://www.instagram.com/ibrahimbkkari">@ibrahimbkkari</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="card reveal form" id="contactForm">
+            <h3>رسالة سريعة</h3>
+
+            <label>
+              اسمك
+              <input name="name" type="text" placeholder="مثال: أحمد" required minlength="2" />
+            </label>
+
+            <label>
+              شو بدك تعمل؟
+              <select name="service" required>
+                <option value="" selected disabled>اختر...</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="Portfolio / CV">Portfolio / CV</option>
+                <option value="UI Design">UI Design</option>
+                <option value="Fix / Responsive">Fix / Responsive</option>
+              </select>
+            </label>
+
+            <label>
+              تفاصيل
+              <textarea name="message" rows="4" placeholder="اكتب تفاصيل بسيطة..." required minlength="10"></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">إرسال على واتساب</button>
+            <p class="hint">* الرسالة بتنفتح بواتساب مباشرة.</p>
+
+            <div class="toast" id="toast" role="status" aria-live="polite" hidden>تم النسخ ✅</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <p>© <span id="year"></span> Ibrahim Bkkari</p>
+      <a class="toTop" href="#top">فوق ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
