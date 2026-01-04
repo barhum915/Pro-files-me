@@ -124,15 +124,15 @@ function initScrollUX() {
 function renderSkills() {
   const wrap = $("#skillsGrid");
   if (!wrap) return;
-  wrap.innerHTML = skills.map(s => 
-    <div class="card skill reveal">
-      <div class="skillTop">
-        <strong>${escapeHtml(s.name)}</strong>
-        <span>${s.level}% • ${escapeHtml(s.note)}</span>
-      </div>
-      <div class="bar"><i style="width:${s.level}%"></i></div>
+wrap.innerHTML = skills.map(s => 
+  <div class="card skill reveal">
+    <div class="skillTop">
+      <strong>${escapeHtml(s.name)}</strong>
+      <span>${s.level}% • ${escapeHtml(s.note)}</span>
     </div>
-  ).join("");
+    <div class="bar"><i style="width:${s.level}%"></i></div>
+  </div>
+).join("");
 }
 
 // ====== GITHUB PROJECTS (AUTO) + SKELETON ======
