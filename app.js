@@ -226,26 +226,6 @@ function buildWhatsappText({ name, service, msg }) {
 بدي: ${service}
 التفاصيل: ${msg}`;
 }
-
-const form = document.getElementById("contactForm");
-
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const name = form.name.value.trim();
-    const service = form.service.value;
-    const msg = form.message.value.trim();
-
-    const phone = "963968201410";
-    const text = encodeURIComponent(
-      buildWhatsappText({ name, service, msg })
-    );
-
-    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-  });
-}
-
 /* =========================
    Init
 ========================= */
