@@ -221,11 +221,12 @@ async function loadProjects() {
    (بيحل مشكلة ${name}... لازم backticks)
 ========================= */
 function buildWhatsappText({ name, service, msg }) {
-  return `مرحبا 👋
+  return `مرحباً 👋
 أنا: ${name}
 بدي: ${service}
 التفاصيل: ${msg}`;
 }
+
 /* =========================
    Init
 ========================= */
