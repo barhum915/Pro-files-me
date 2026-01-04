@@ -302,15 +302,20 @@ async function loadProjects() {
       const card = document.createElement("div");
       card.className = "project-card";
 
-      card.innerHTML = `
-        <h3>${repo.name}</h3>
-        <p>${repo.description ? repo.description : "بدون وصف حالياً."}</p>
+     card.innerHTML = `
+  <h3>${repo.name}</h3>
+  <p>${repo.description ? repo.description : "بدون وصف حالياً."}</p>
 
-        <div class="project-actions">
-          <a class="btn-mini" href="${repo.html_url}" target="_blank">GitHub</a>
-          ${repo.homepage ? `<a class="btn-mini" href="${repo.homepage}" target="_blank">Live</a>` : ""}
-        </div>
-      `;
+  <div class="project-actions">
+    <a class="btn-mini" href="${repo.html_url}" target="_blank" rel="noopener">GitHub</a>
+    ${
+      repo.homepage
+        ? `<a class="btn-mini" href="${repo.homepage}" target="_blank" rel="noopener">Live</a>`
+        : ""
+    }
+  </div>
+`;
+
 
       grid.appendChild(card);
     });
