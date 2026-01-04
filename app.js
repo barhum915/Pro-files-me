@@ -279,3 +279,49 @@ window.open(url, "_blank", "noopener");
   initReveal();
   initScrollUX();
 })();
+async function loadProjects() {
+  const grid = document.getElementById("projectsGrid");
+  if (!grid) return;
+
+  grid.innerHTML = "<p>عم حمّل المشاريع...</p>";
+
+  try {
+    const res = await fetch("/api/github");
+    if (!res.ok) throw new Error("API failed: " + res.status);
+
+    const repos = await res.json();
+
+    // فلترة وترتيب (اختياري)
+    const filtered = repos
+      .filter(r => !r.fork) // يشيل المشاريع المنسوخة fork
+      .slice(0, 9);         // أول 9 مشاريع
+
+    grid.innerHTML = "";
+
+    filtered.forEach(repo => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+
+      card.innerHTML = `
+        <h3>${repo.name}</h3>
+        <p>${repo.description ? repo.description : "بدون وصف حالياً."}</p>
+
+        <div class="project-actions">
+          <a class="btn-mini" href="${repo.html_url}" target="_blank">GitHub</a>
+          ${repo.homepage ? `<a class="btn-mini" href="${repo.homepage}" target="_blank">Live</a>` : ""}
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = "<p>ما لقيت مشاريع لعرضها.</p>";
+    }
+
+  } catch (err) {
+    grid.innerHTML = `<p>صار خطأ بتحميل المشاريع: ${err.message}</p>`;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadProjects);

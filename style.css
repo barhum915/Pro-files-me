@@ -244,6 +244,57 @@ h1{margin:12px 0 10px; font-size:38px; line-height:1.15}
   background: linear-gradient(90deg, var(--accent), var(--accent2));
 }
 
+.projects-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:16px;
+  margin-top:16px;
+}
+
+.project-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius:16px;
+  padding:16px;
+  backdrop-filter: blur(10px);
+}
+
+.project-card h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.project-card p{
+  margin:0 0 12px;
+  opacity:0.85;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.project-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn-mini{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 12px;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  text-decoration:none;
+  color:#fff;
+  font-size:13px;
+  background: rgba(0,0,0,0.25);
+}
+
+.btn-mini:hover{
+  transform: translateY(-1px);
+}
+
+
 .projects{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
