@@ -381,3 +381,62 @@ input:focus, textarea:focus, select:focus{
 }
 
 .reveal{opacity:1 !important; transform:none !important;}
+/* Projects cards - upgrade */
+.projects-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+  margin-top:18px;
+}
+
+.project-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 14px;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.project-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.08);
+}
+
+.project-card h3{
+  margin:0 0 10px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.project-card p{
+  margin: 0 0 12px;
+  opacity: .85;
+  font-size: 13px;
+  min-height: 32px;
+}
+
+.project-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn-mini{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 12px;
+  border-radius: 12px;
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.20);
+  text-decoration:none;
+  font-size: 13px;
+  transition: .2s ease;
+}
+
+.btn-mini:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.25);
+}
